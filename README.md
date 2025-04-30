@@ -120,3 +120,26 @@ The database is structured around the following key entities, ensuring efficient
 
 **Relationships**:  
 - A **Payment** is tied to one **Booking**.  
+
+## Feature Breakdown
+
+### **User Management**
+Allows users to register, log in, and manage profiles. Hosts and guests have distinct roles, enabling property hosting and booking capabilities. Secure authentication ensures data privacy.
+
+### **Property Management**
+Enables hosts to create, update, and list properties with details like pricing, descriptions, and availability. Guests can browse and filter properties based on preferences.
+
+### **Booking System**
+Facilitates reservation creation, modification, and cancellation with date validation and pricing calculations. Integrates with payments to confirm bookings.
+
+### **Review System**
+Lets guests leave ratings and feedback for properties they've booked. Helps maintain trust and quality by displaying honest user experiences.
+
+### **Payment Processing**
+Securely handles transactions for bookings via integrated payment gateways. Tracks payment statuses (pending, completed) and confirms successful reservations.
+
+### **Search & Filtering**
+Allows guests to find properties using filters (price, location, amenities). Ensures quick discovery of relevant listings through optimized queries.
+
+### **Admin Dashboard**
+Provides moderators with tools to manage users, properties, and bookings. Includes analytics and reporting for platform oversight.
