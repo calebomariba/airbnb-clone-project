@@ -61,3 +61,62 @@ This project leverages the following technologies to build a scalable and secure
 - **Docker**: A containerization platform used to create consistent development and deployment environments, ensuring app portability.  
 - **GitHub Actions**: A CI/CD (Continuous Integration/Continuous Deployment) tool for automating testing, builds, and deployments.  
 - **Markdown**: A lightweight markup language for documentation, ensuring clear and structured project guides (e.g., this README).  
+
+## Database Design  
+
+The database is structured around the following key entities, ensuring efficient data relationships for the Airbnb Clone:  
+
+### **Users**  
+- `id` (Primary Key)  
+- `username`  
+- `email`  
+- `password` (hashed)  
+- `role` (e.g., guest, host)  
+
+**Relationships**:  
+- A **User** (host) can own multiple **Properties**.  
+- A **User** (guest) can make multiple **Bookings** and **Reviews**.  
+
+### **Properties**  
+- `id` (Primary Key)  
+- `title`  
+- `description`  
+- `price_per_night`  
+- `host_id` (Foreign Key → Users)  
+
+**Relationships**:  
+- A **Property** belongs to one **User** (host).  
+- A **Property** can have multiple **Bookings** and **Reviews**.  
+
+### **Bookings**  
+- `id` (Primary Key)  
+- `start_date`  
+- `end_date`  
+- `total_price`  
+- `guest_id` (Foreign Key → Users)  
+- `property_id` (Foreign Key → Properties)  
+
+**Relationships**:  
+- A **Booking** is created by a **User** (guest) and linked to one **Property**.  
+- A **Booking** can have one associated **Payment**.  
+
+### **Reviews**  
+- `id` (Primary Key)  
+- `rating` (e.g., 1-5)  
+- `comment`  
+- `guest_id` (Foreign Key → Users)  
+- `property_id` (Foreign Key → Properties)  
+
+**Relationships**:  
+- A **Review** is written by a **User** (guest) about a **Property**.  
+- A **Property** can have multiple **Reviews**.  
+
+### **Payments**  
+- `id` (Primary Key)  
+- `amount`  
+- `payment_method`  
+- `status` (e.g., pending, completed)  
+- `booking_id` (Foreign Key → Bookings)  
+
+**Relationships**:  
+- A **Payment** is tied to one **Booking**.  
