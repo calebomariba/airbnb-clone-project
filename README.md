@@ -143,3 +143,33 @@ Allows guests to find properties using filters (price, location, amenities). Ens
 
 ### **Admin Dashboard**
 Provides moderators with tools to manage users, properties, and bookings. Includes analytics and reporting for platform oversight.
+
+## API Security
+
+To ensure the integrity and safety of our platform, the following security measures will be implemented:
+
+### **Authentication (JWT)**
+- **Implementation**: JSON Web Tokens (JWT) for secure user sessions.
+- **Why It Matters**: Protects against unauthorized access by verifying user identities before granting access to sensitive data or actions.
+
+### **Authorization (Role-Based Access Control)**
+- **Implementation**: Granular permissions for users (guests, hosts, admins).
+- **Why It Matters**: Ensures users can only perform actions relevant to their role (e.g., hosts manage properties, guests make bookings).
+
+### **Rate Limiting**
+- **Implementation**: Throttle excessive API requests (e.g., 100 requests/minute).
+- **Why It Matters**: Prevents brute-force attacks and API abuse, maintaining system stability.
+
+### **Data Encryption (HTTPS & Database)**
+- **Implementation**: TLS/SSL for data in transit; hashing (passwords) and encryption (PII) at rest.
+- **Why It Matters**: Safeguards sensitive data (e.g., payment details, user credentials) from interception or leaks.
+
+### **Input Validation & Sanitization**
+- **Implementation**: Strict checks on API request data (e.g., SQL injection prevention).
+- **Why It Matters**: Blocks malicious payloads that could exploit vulnerabilities in databases or services.
+
+### **Payment Security (PCI Compliance)**
+- **Implementation**: Tokenization for payment processing; no raw card data storage.
+- **Why It Matters**: Reduces fraud risk and ensures compliance with financial security standards.
+
+Security is prioritized across all layers to protect user privacy, maintain trust, and prevent disruptions to critical services like bookings and payments.
