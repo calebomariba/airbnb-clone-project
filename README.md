@@ -173,3 +173,23 @@ To ensure the integrity and safety of our platform, the following security measu
 - **Why It Matters**: Reduces fraud risk and ensures compliance with financial security standards.
 
 Security is prioritized across all layers to protect user privacy, maintain trust, and prevent disruptions to critical services like bookings and payments.
+
+## CI/CD Pipeline
+
+### What is CI/CD?
+CI/CD (Continuous Integration and Continuous Deployment) is a development practice that automates the building, testing, and deployment of applications. CI ensures code changes are regularly merged and validated, while CD automates the delivery of these changes to production environments.
+
+### Why It Matters for This Project
+- **Quality Assurance**: Automated testing catches bugs early before they reach production
+- **Faster Releases**: Enables frequent, reliable updates with minimal manual intervention
+- **Consistency**: Eliminates "it works on my machine" issues through standardized environments
+- **Rollback Safety**: Allows quick reverts if issues emerge in production
+
+### Tools We Use
+- **GitHub Actions**: For automating workflows (tests, builds, deployments)
+- **Docker**: Ensures consistent environments across development, testing, and production
+- **AWS/GCP**: Cloud platforms for deployment and hosting
+- **SonarQube**: For continuous code quality inspection
+- **Postman**: For automated API testing
+
+This pipeline helps maintain development velocity while ensuring stability as we scale the Airbnb Clone platform.
