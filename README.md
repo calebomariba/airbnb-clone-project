@@ -34,7 +34,6 @@ The Airbnb Clone Project is a full-stack web application designed to replicate c
 ### 7. Software Developers
 - **Frontend**: Builds user interfaces
 - **Backend**: Implements business logic and APIs
-- **Full-stack**: Handles both frontend and backend
 
 ### 8. Quality Assurance (QA) Engineer
 - Creates test plans and scenarios
